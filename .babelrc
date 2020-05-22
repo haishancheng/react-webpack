@@ -1,0 +1,27 @@
+/* .babelrc */
+{
+  "presets": [
+    [
+      "@babel/preset-env", //转译ES2015+的语法
+      {
+        "targets": {
+          "browsers": ["> 1%", "last 2 versions", "ie >= 9"]
+        },
+        "corejs": "2",
+        "useBuiltIns": "usage"
+      }
+    ],
+    "@babel/preset-react" //转译react的JSX
+  ],
+  "plugins": [
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": true
+      }
+    ],
+    "@babel/plugin-transform-runtime"
+  ]
+}
